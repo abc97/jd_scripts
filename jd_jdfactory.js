@@ -34,7 +34,7 @@ const $ = new Env('东东工厂');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
+let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
 const randomCount = 0;//const randomCount = $.isNode() ? 20 : 5;
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
@@ -56,10 +56,10 @@ if ($.isNode()) {
 let wantProduct = ``;//心仪商品名称
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-                     'T012Z3_rmZ-VI8dsCjVWnYaS5kRrbA@T0225KkcRU8Y9lbecUzykvEDdgCjVWnYaS5kRrbA@T018v_50RR4Z9lXTIh6b1ACjVWnYaS5kRrbA', 
-                     'T012Z3_rmZ-VI8dsCjVWnYaS5kRrbA@T0225KkcRU8Y9lbecUzykvEDdgCjVWnYaS5kRrbA@T018v_50RR4Z9lXTIh6b1ACjVWnYaS5kRrbA',
-                     'T012Z3_rmZ-VI8dsCjVWnYaS5kRrbA@T0225KkcRU8Y9lbecUzykvEDdgCjVWnYaS5kRrbA@T018v_50RR4Z9lXTIh6b1ACjVWnYaS5kRrbA',
-                     'T012Z3_rmZ-VI8dsCjVWnYaS5kRrbA@T0225KkcRU8Y9lbecUzykvEDdgCjVWnYaS5kRrbA@T018v_50RR4Z9lXTIh6b1ACjVWnYaS5kRrbA' 
+                     'T0225KkcRhca_FbWdkynnKZbJwCjVWnYaS5kRrbA@T0225KkcRkoa91eGIBz0xqFeJQCjVWnYaS5kRrbA@T0205KkcOXRzigOxXHy85ZNWCjVWnYaS5kRrbA@T016anXulbWUIt5FKBv0CjVWnYaS5kRrbA', 
+                     'T0225KkcRhca_FbWdkynnKZbJwCjVWnYaS5kRrbA@T0225KkcRkoa91eGIBz0xqFeJQCjVWnYaS5kRrbA@T0205KkcOXRzigOxXHy85ZNWCjVWnYaS5kRrbA@T016anXulbWUIt5FKBv0CjVWnYaS5kRrbA',
+                     'T0225KkcRhca_FbWdkynnKZbJwCjVWnYaS5kRrbA@T0225KkcRkoa91eGIBz0xqFeJQCjVWnYaS5kRrbA@T0205KkcOXRzigOxXHy85ZNWCjVWnYaS5kRrbA@T016anXulbWUIt5FKBv0CjVWnYaS5kRrbA',
+                     'T0225KkcRhca_FbWdkynnKZbJwCjVWnYaS5kRrbA@T0225KkcRkoa91eGIBz0xqFeJQCjVWnYaS5kRrbA@T0205KkcOXRzigOxXHy85ZNWCjVWnYaS5kRrbA@T016anXulbWUIt5FKBv0CjVWnYaS5kRrbA',
                     ];
 																																																																  
 																																																																  
